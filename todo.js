@@ -1,3 +1,5 @@
+// forEach , filter
+
 const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInPut = toDoForm.querySelector("input"),
   toDoList = document.querySelector(".js-toDoList");
