@@ -5,23 +5,66 @@ body {
   font-family: "Nothing You Could Do", cursive;
 }
 
+@keyframes font {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
-  color: rgb(52, 73, 94);
+  color: black;
+  animation: font 3s;
+}
+
+@keyframes fadeInRoof {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.roof {
+  position: absolute;
+  font-size: 40px;
+  color: #a26836;
+  display: flex;
+  top: 65px;
+  left: 5px;
+  animation: fadeInRoof 2s;
+}
+
+.roof i {
 }
 
 .content {
-  margin-left: 20px;
+  margin-top: 100px;
+  margin-left: 25px;
+}
+
+@keyframes fadeInPaper {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .paper {
   position: absolute;
-  left: 0px;
+  top: 20px
+  left: 7px;
   width: 350px;
   height: 500px;
   z-index: -1;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 10px;
-  opacity: 0.6;
+
+  opacity: 0.8;
+  animation: fadeInPaper 2s;
 }
 
 h1 {
@@ -42,14 +85,14 @@ h1 {
 }
 
 .showing {
-  margin-top: -30px;
+  margin-top: -50px;
   display: block;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 @keyframes fadeOut {
   from {
-    opacity: 0.8;
+    opacity: 1;
   }
   to {
     opacity: 0;
@@ -62,9 +105,8 @@ h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
   z-index: -2;
-  animation: fadeOut 2s;
+  animation: fadeOut 2s ease-in;
 }
 
 @keyframes fadeIn {
@@ -82,6 +124,32 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 2s ease-in;
   z-index: -1;
 }
+
+.js-form input,
+.js-toDoForm input{
+  width: 250px;
+  border-radius: 20px;
+  outline-style: none;
+  border:solid 2px white;
+  font-size: 15px;
+  opacity: 0.5;
+  
+
+}
+
+.js-form input{
+  margin-bottom: 20px;
+}
+
+.js-toDoList{
+ list-style: none;
+}
+
+.js-toDoList li{
+ 
+  font-size: 40px;
+}
+
